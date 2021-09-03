@@ -213,7 +213,7 @@ class PageOne(tk.Frame):
         self.tb7.delete(1.0,END)
         self.tb8.delete(1.0,END)
 
-        self.scrollbar = Scrollbar(self)  # height= not permitted here!
+        self.scrollbar = Scrollbar(self)  
         self.tb8.config(yscrollcommand=self.scrollbar.set)
         self.scrollbar.config(command=self.tb8.yview)
         self.grid()
