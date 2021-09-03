@@ -218,11 +218,6 @@ class PageOne(tk.Frame):
         self.scrollbar.config(command=self.tb8.yview)
         self.grid()
         self.scrollbar.grid(column=12, row=3, rowspan=2,  sticky=N+S+W)
-        #cg={'1':"CORELDRAW\n\n1) Memory space : For a nifty program of its size, Corel Draw occupy uses very limited capacity of any machine ie., a computer’s memory.\n----------------------------------------------------------------------------------------2) Performance : Machine works to its full capacity, required very less down-time and the performance never is an issue.\n---------------------------------------------------------------------------------------- 3)Ease of Use :  Also, it is very easy to install on most machines and is OS independent.\n---------------------------------------------------------------------------------------- 4) Platform support : Windows OS or Linux or any other.\n----------------------------------------------------------------------------------------",'2':"OPENGL\n\n1)Memory space : The amount of RAM storage is also limited for the driver and it might return a GL_OUT_OF_MEMORY when you call glGetError()\n----------------------------------------------------------------------------------------2)Performance : The OpenGL API is an open standard, which means that various hardware makers and operating system developers can freely create an OpenGL implementation as part of their system\n----------------------------------------------------------------------------------------3) Ease of Use : Many essential OpenGL extensions and methods, although documented, arealso patented, thus imposing serious legal troubles to implement them.\n----------------------------------------------------------------------------------------4) Platform support :Windows, macOS, and Linux.\n----------------------------------------------------------------------------------------",'3':"DIRECT3D\n\n1) Memory space : If you need more space than available the that's no problem. The driver will move the data between system-ram, AGP-memory and video ram for you.\n---------------------------------------------------------------------------------------- 2)Performance : Direct3D is a proprietary API by Microsoft that provides functions to render two-dimensional (2D) and three-dimensional (3D) graphics, and uses hardware acceleration if available on the graphics card.\n----------------------------------------------------------------------------------------3) Ease of use : Direct3D frees the game programmer from accommodating the graphics hardware.\n----------------------------------------------------------------------------------------4)Platform support : Windows platform.\n----------------------------------------------------------------------------------------",'4':"VULKAN\n\n1) Memory space : reduced load on CPUs through the use of batching, leaving the CPU free to do more computation or rendering than otherwise.\n----------------------------------------------------------------------------------------2) Performance : It can offer higher performance and more balanced CPU/GPU usage, much like Direct3D 12 and Mantle. \n----------------------------------------------------------------------------------------3)Ease of Use : Someone trying to learn what's really going on through Vulkan only understands the abstraction, not the hardware., command queues are more explicit, as are GPU devices, state changes, memory allocation.\n----------------------------------------------------------------------------------------4)Platform Support : Vulkan is available on multiple modern operating systems.\n----------------------------------------------------------------------------------------"}
-        #point1=self.tb1.get("1.0","end-1c")
-        #point2=self.tb2.get("1.0","end-1c")
-        #if point1 > '4' or point2 > '4':
-         #    tkMessageBox.showinfo("CAREER QUERY", "Please insert correct tool number")
 
         baseurl = "https://www.careerbliss.com/"
         # print("Search for a Company")
@@ -245,13 +240,6 @@ class PageOne(tk.Frame):
 
             count=count+1
 
-            #tkMessageBox.showinfo("CAREER QUERY", "Could not load data for {}".format(input))
-            #self.controller.show_frame("StartPage")
-
-
-        #for element in scrapeme:
-        #print(element.text)
-
 
         baseurl = "https://www.indeed.com/cmp/"
 
@@ -270,12 +258,7 @@ class PageOne(tk.Frame):
         except:
 
             count=count+1
-            #tkMessageBox.showinfo("CAREER QUERY", "Could not load data for {}".format(input))
-            #self.controller.show_frame("StartPage")
-        #for element in scrapeme:
-        #print(element.text)
-
-             # read our comments.txt file
+            
 
         statinfo = os.stat('/home/home/PycharmProjects/untitled/review.txt')
 
@@ -294,7 +277,6 @@ class PageOne(tk.Frame):
             tweets = []
 
             for line in f:
-            # use a try-except block since we occasionally get language not supported errors
                 parsed_tweet = {}
                 parsed_tweet['text'] = line
 
