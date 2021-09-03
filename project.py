@@ -111,11 +111,6 @@ class StartPage(tk.Frame):
         self.text1=Text(self,width=50,height=2)
         self.text1.grid(row=6,column=3,sticky=W)
 
-        #self.text1.insert(0.0,"")
-        #self.top1=Label(self,fg="black",text="Search tools for:Android\n\t     Java\n\t            Graphics\n\t        C/C++\n                               Electronics\n\t     CAD\n\t             Networks\n\t            Database",bg="#a1dbcd")
-        #self.top1.configure(font=("Times New Roman", 12, "bold"))
-        #self.top1.grid(sticky=W,row=3,column=1)
-
         self.input="jj"
 
         self.obtn = Button(self, text="SUBMIT",command=self.contains)
