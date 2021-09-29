@@ -3,4 +3,4 @@ This project provides a system where the user can input any company name and the
 
 These ratings from sentiment analysis are used for further classification. C4.5 algorithm is used for classifying companies to 3 different classes: good , moderate or bad. The ratings obtained from C4.5 classification is used for showing recommendation of companies that belong to a similar class.
 
-The user can select one of the recommended companies and compare visually by a graph displayed. The system also mines data from twitter to display the trending tweets about the company that is being queried. This application is developed using python for GUI and sentiment analysis. The recommendation system is built using R. This application is useful for those looking to make career decisions. 
+The user can select one of the recommended companies and compare visually by a graph displayed. The system also mines data from twitter to display the trending tweets about the company that is being queried. This application is developed using python for GUI and sentiment analysis. The recommendation system is built using R.
