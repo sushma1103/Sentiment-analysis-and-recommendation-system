@@ -444,6 +444,7 @@ class PageTwo(tk.Frame):
         self.tb8.insert(0.0, java[point2])
         self.tb7.configure(state=DISABLED)
         self.tb8.configure(state=DISABLED)
+        
 class PageThree(tk.Frame):
 
         def __init__(self, parent, controller):
@@ -454,64 +455,7 @@ class PageThree(tk.Frame):
             self.columnconfigure(1, pad=5)
             self.columnconfigure(2, pad=5)
             self.columnconfigure(3, pad=5)
-            self.columnconfigure(4, pad=5)
-            self.rowconfigure(0, pad=15)
-            self.rowconfigure(1, pad=15)
-            self.rowconfigure(2, pad=15)
-            self.rowconfigure(3, pad=15)
-            self.rowconfigure(4, pad=15)
-            self.rowconfigure(18, pad=15)
-            self.rowconfigure(46, pad=15)
 
-            self.lbl1 = Label(self, text="TOP TOOLS:",bg="#a1dbcd")
-            self.lbl1.grid(sticky=W, row=2, column=1, pady=1, padx=4)
-            self.lbl1.configure(font=("Times New Roman", 14, "bold"))
-            self.lbla2 = Label(self, text="1.Autocad",bg="#a1dbcd")
-            self.lbla2.grid(sticky=W, row=2, column=2, pady=1, padx=4)
-            self.lbla2.configure(font=("Times New Roman", 12))
-            self.lbla3 = Label(self, text="2.Solidworks",bg="#a1dbcd")
-            self.lbla3.grid(sticky=W, row=2, column=3, pady=1, padx=4)
-            self.lbla3.configure(font=("Times New Roman", 12))
-            self.lbla4 = Label(self, text="3.VectorWorks",bg="#a1dbcd")
-            self.lbla4.grid(sticky=W, row=2, column=4, pady=1, padx=4)
-            self.lbla4.configure(font=("Times New Roman", 12))
-            self.lbla5 = Label(self, text="4.Draftsight",bg="#a1dbcd")
-            self.lbla5.grid(sticky=W, row=2, column=5, pady=1, padx=4)
-            self.lbla5.configure(font=("Times New Roman", 12))
-            self.hbtn = Button(self, text="BACK", command=lambda:controller.show_frame("StartPage") )
-            self.hbtn.grid(row=46, column=0, columnspan=2, sticky=W)
-            self.obtn = Button(self, text="SUBMIT", command=lambda: self.info())
-            self.obtn.grid(row=46, column=2, columnspan=2, sticky=W)
-            self.tb7 = Text(self, width=55, height=20, font=("Helvetica", 11), wrap=WORD)
-            self.tb7.grid(row=4, column=0, columnspan=2, sticky=W)
-            self.tb8 = Text(self, width=55, height=20, font=("Helvetica", 11), wrap=WORD)
-            self.tb8.grid(row=4, column=5, columnspan=2, sticky=W)
-
-            self.tb1 = Text(self, width=55, height=5)
-            self.tb1.insert(0.0, "insert tool number to compare here")
-            # self.tb1.insert(self,'enter tool number',0)
-            self.tb1.grid(row=18, column=0, sticky=W)
-            self.tb2 = Text(self, width=55, height=5)
-            self.tb2.insert(0.0, "insert tool number to compare here")
-            #self.tb2.insert(0.0, "insert here")
-            self.tb2.grid(row=18, column=5, sticky=W)
-
-        def info(self):
-            # print(val)
-            self.tb7.configure(state=NORMAL)
-            self.tb8.configure(state=NORMAL)
-
-            self.tb7.delete(1.0, END)
-            self.tb8.delete(1.0, END)
-            auto = {'1': "AUTOCAD\n\n1) Cost : Rs.15,900\n----------------------------------------------------------------------------------------2) Features : Drawings can be created in 2D or 3D and rotated .\nReduced the design timescales , Reuse of the designs\nThe drawing errors can be corrected easily\nThe drawings can be sent/received via email in seconds\n----------------------------------------------------------------------------------------3) Ease of Use : It is not easy for first-time users to learn the software\n----------------------------------------------------------------------------------------4) Cons : consumes large amounts of the computer processing power\nIt requires high-quality computer hardware that can be costly\nIt requires the advanced manufacturing devices which are very expensive.\n----------------------------------------------------------------------------------------", '2': "SOLIDWORKS\n\n1) Cost : range from Rs. 3,995 to Rs. 8,499.\n----------------------------------------------------------------------------------------2) Features : Faster 2D Drawing Creation \nImproved Large Assembly Performance \nExpanded capabilities for Model Based Definition\n----------------------------------------------------------------------------------------3) Ease of Use : Toolbar is well oriented and simple\nQuick learning is possible.\n----------------------------------------------------------------------------------------4) Cons : Fails to makes detailed drawing using raw data\nImage rendering comes no where near to CATIA or higher versions\n----------------------------------------------------------------------------------------", '3': "VECTORWORKS\n\n1) Cost : $2,595.\n----------------------------------------------------------------------------------------2) Features : It is fully compatible with DWF/DXF/DWG files.\n----------------------------------------------------------------------------------------3) Ease of Use : The program is straightforward to set up and use\n----------------------------------------------------------------------------------------4)Cons : The software requires much computer processing\nsometimes the software does not properly export the DWGs\n----------------------------------------------------------------------------------------", '4': "DRAFTSIGHT\n\n1) Cost : Free.\n----------------------------------------------------------------------------------------2) Features : DraftSight is good for 2D modeling. \nit can save and open DXF and DWG files\noffers macro recording\n----------------------------------------------------------------------------------------3) Ease of Use : it’s good for quick calculations and drawings.\n----------------------------------------------------------------------------------------4) Cons : The free version of DraftSight doesn’t offer much\nit doesn’t run LISP routines and offers no express tools.\n----------------------------------------------------------------------------------------"}
-            point1 = self.tb1.get("1.0", "end-1c")
-            point2 = self.tb2.get("1.0", "end-1c")
-            if point1 > '4' or point2 > '4':
-             tkMessageBox.showinfo("CAREER QUERY", "Please insert correct tool number")
-            self.tb7.insert(0.0, auto[point1])
-            self.tb8.insert(0.0, auto[point2])
-            self.tb7.configure(state=DISABLED)
-            self.tb8.configure(state=DISABLED)
 
 if __name__ == "__main__":
     app = SampleApp()
